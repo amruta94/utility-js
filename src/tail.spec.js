@@ -1,14 +1,15 @@
-const head = require('./head');
+const tail = require('./tail');
 
-describe('Head', () => {
+describe('tail', () => {
     var arrayOfObjects = [1,2,3];
-    it('Head of [1,2,3] is 1', () => {
-        expect(head(arrayOfObjects)).toEqual(1);
+    var tailOfArrayOfObjects = [2,3];
+    it('tail of [1,2,3] is [2,3]', () => {
+        expect(tail(arrayOfObjects)).toEqual(tailOfArrayOfObjects);
     });
 
     var emptyArray = [];
-    it('Head of [] is null', () => {
-        expect(head(emptyArray)).toEqual(null);
+    it('tail of [] is []', () => {
+        expect(tail(emptyArray)).toEqual(emptyArray);
     });
 
 })
