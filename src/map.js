@@ -2,26 +2,15 @@ const cube = require('./cube');
 const identity = require('./identity');
 
 const map = (arrayOfNumbers,paramFunction) => {
-    if (paramFunction && (typeof paramFunction == "function") && paramFunction.name == "cube") {   
+    if (paramFunction && (typeof paramFunction == "function")) {   
         if(arrayOfNumbers.length == 0){
             return arrayOfNumbers;
         }
         
         return arrayOfNumbers.map(function(number){
-            return cube(number);
+            return paramFunction(number);
         })
     }
-    else if (paramFunction && (typeof paramFunction == "function") && paramFunction.name == "identity") {   
-        if(arrayOfNumbers.length == 0){
-            return arrayOfNumbers;
-        }
-        
-        return arrayOfNumbers.map(function(number){
-            return identity(number);
-        })
-    }
-   
-     
 }
 
 module.exports = map;

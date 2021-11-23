@@ -21,4 +21,6 @@ describe('map', () => {
     it('map([1,2,3],identity) is [1,2,3]', () => {
         expect(map(arrayOfNumbers, identity)).toEqual(identityArray);
     });
+
+    //map([a{x : 10}],someObject => someObject.x + 1) -> [11]
 })
