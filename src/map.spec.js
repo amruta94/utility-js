@@ -23,4 +23,12 @@ describe('map', () => {
     });
 
     //map([a{x : 10}],someObject => someObject.x + 1) -> [11]
+    var jsonObject = { x:10 };
+    var arrayOfJSONObjects = [];
+    arrayOfJSONObjects.push(jsonObject);
+    var resultObject = [11];
+
+    it('map([{x : 10}],someObject => someObject.x + 1) is [11]', () => {
+        expect(map(arrayOfJSONObjects, someObject => someObject.x + 1)).toEqual(resultObject);
+    });
 })

@@ -1,14 +1,14 @@
 const cube = require('./cube');
 const identity = require('./identity');
 
-const map = (arrayOfNumbers,paramFunction) => {
+const map = (arrayOfObjects,paramFunction) => {
     if (paramFunction && (typeof paramFunction == "function")) {   
-        if(arrayOfNumbers.length == 0){
-            return arrayOfNumbers;
+        if(arrayOfObjects.length == 0){
+            return arrayOfObjects;
         }
         
-        return arrayOfNumbers.map(function(number){
-            return paramFunction(number);
+        return arrayOfObjects.map(function(object){
+            return paramFunction(object);
         })
     }
 }
